@@ -5,7 +5,6 @@ import pdb
 ################## ithuva_aa athuva_aa vagai  ####################
 def yezhutha_aa(yezhuthu):
     return ari.yezhutha_aa(yezhuthu[0])
-
 # vaguppa_aa
 def vaguppu_thalaiya_aa(yezhuthu): return yezhuthu == '['
 def vaguppu_kaala_aa(yezhuthu):    return yezhuthu == ']'
