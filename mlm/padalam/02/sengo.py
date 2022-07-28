@@ -1,16 +1,16 @@
 from arichuvadi import get_letters_coding as _ta
 
-def yezhuthu_poruvutha_aa(paangu, saram):
+def urupadi_poruvutha_aa(paangu, saram):
     return paangu[0] == saram[0]
 
-def paangu_poru(paangu, saram, neelam=0):
-    print(neelam, ''.join(paangu), ''.join(saram))
+def paangu_poru(paangu, saram, poruvu_neelam=0):
+    print(poruvu_neelam, ''.join(paangu), ''.join(saram))
     
     if len(paangu) == 0:
-        return True, neelam
+        return True, poruvu_neelam
 
-    if yezhuthu_poruvutha_aa(paangu, saram):
-        return paangu_poru(paangu[1:], saram[1:], neelam + 1)
+    if urupadi_poruvutha_aa(paangu, saram):
+        return paangu_poru(paangu[1:], saram[1:], poruvu_neelam + 1)
     else:
         return False, None
 
