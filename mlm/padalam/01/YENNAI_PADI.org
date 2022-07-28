@@ -1,0 +1,7 @@
+(sengo) vanangamudi@karunthulai:~/agam/projects/code/tamilnlp/sengo/mlm
+$ python sengo.py 
+0 தமிழ் தமிழ்
+1 மிழ் மிழ்
+2 ழ் ழ்
+3  
+தமிழ், தமிழ் == True
