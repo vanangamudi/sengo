@@ -28,6 +28,9 @@ def maatru_kaala_aa(yezhuthu):    return yezhuthu == ')'
 def maatraa_aa(paangu):
     return maatru_thalaiya_aa(paangu[0]) and maatru_kaala_aa(paangu[-1])
 
+# kurigal
+
+
 ################ pirippavai ######################################
 
 # [தமிழ்] -> த,மி,ழ்
