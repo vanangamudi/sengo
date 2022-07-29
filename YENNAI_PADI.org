@@ -1,7 +1,7 @@
-* செங்கோ: தமிழுக்கான செங்கோவை பாங்குப்பொருத்தி அடிப்படையிலிருந்து
+* செங்கோ: தமிழுக்கான செங்கோவை பாங்குப்பொருத்தி. அடிப்படையிலிருந்து
 Sengo regular expression engine from scratch for Tamil Text
 
-* எ.டுகா - demo
+* எடு.கா - demo
 #+begin_src bash
 $ python vaayil.py  -p "[tT]he [Gg]reat கிரிகாலன் magic show" -s 'the great கிரிகாலன் magic show'
 >>> "[tT]he [Gg]reat கிரிகாலன் magic show" "the great கிரிகாலன் magic show" =?= True, the great கிரிகாலன் magic show

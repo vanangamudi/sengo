@@ -1,8 +1,5 @@
 from arichuvadi import get_letters_coding as _ta
 import arichuvadi as ari
-import pdb
-import sys
-import argparse
 
 ################## ithuva_aa athuva_aa vagai  ####################
 # ?, *, + kurigal
@@ -52,7 +49,7 @@ def maatraa_aa(paangu):
 ################ pirippavai ######################################
 
 # [தமிழ்] -> த,மி,ழ்
-def vaguppu_piri(paangu, vazhu=False):
+def vaguppu_piri(paangu):
     assert vaguppa_aa(paangu)
     urupadigal = list(paangu[1:-1])
     return urupadigal
