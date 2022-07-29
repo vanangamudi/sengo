@@ -1,0 +1,36 @@
+* செங்கோ: தமிழுக்கான செங்கோவை பாங்குப்பொருத்தி அடிப்படையிலிருந்து
+Sengo regular expression engine from scratch for Tamil Text
+
+* எ.டுகா - demo
+#+begin_src bash
+$ python vaayil.py  -p "[tT]he [Gg]reat கிரிகாலன் magic show" -s 'the great கிரிகாலன் magic show'
+>>> "[tT]he [Gg]reat கிரிகாலன் magic show" "the great கிரிகாலன் magic show" =?= True, the great கிரிகாலன் magic show
+
+#+end_src
+* சார்புகள் (dependencies)
+- [[https://github.com/vanangamudi/arichuvadi][அரிச்சுவடி(arichuvadi)]]
+
+* படலம் அடைவு (padalam dir)
+கீழேகாண்பது போல படலம் எனும் அடைவுக்குள் படிப்படியாக இந்த செங்கோவைப் பொறி எப்படி கட்டப்பட்டது என்றறிய ஏதுவாக ஓவ்வொரு படியிலும் உள்ள மூல நிரலை தனித்தனியாக சேர்த்திருக்கிறேன். வெவ்வேறு நிரல் மொழியில் இதை மொழிபெயர்க்க வேண்டும் என்ற அவாவில் அனைவருக்கும் விளங்கும்படியிருக்க இந்த அடைவுகளை சேர்த்திருக்கிறேன். 
+
+#+begin_src bash
+$ tree -L 2
+.
+├── padalam
+│   ├── 01
+│   ├── 02
+│   ├── 03
+│   ├── 04
+│   ├── 05
+│   ├── 06
+│   ├── 07
+│   ├── 08
+│   ├── 09
+│   └── 10
+├── sengo.py
+├── sothanai.log
+├── sothanai-paangugal.txt
+├── sothanai-varigal.txt
+├── vaayil.py
+└── YENNAI_PADI.org
+#+end_src
