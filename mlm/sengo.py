@@ -16,7 +16,11 @@ def kuriya_aa(yezhuthu):
 
 # yezhutha
 def yezhutha_aa(yezhuthu):
-    return ari.yezhutha_aa(yezhuthu[0])
+    return (ari.yezhutha_aa(yezhuthu[0])
+            or yezhuthu[0].isalpha()
+            or yezhuthu[0].isdigit()
+            or yezhuthu[0].isspace()
+        )
 
 # vaguppa_aa
 def vaguppu_thalaiya_aa(yezhuthu): return yezhuthu == '['
@@ -180,6 +184,9 @@ def paangu_poru(paangu, saram, neelam=0):
     elif urupadiya_aa(muthal):
         if urupadi_poruvutha_aa(muthal, saram):
             return paangu_poru(meethi, saram[1:], neelam + 1)
+
+    else:
+        print(f'பாங்கு {paangu} என்னனு புரியலப்பா!!!')
     
     return False, None
 
