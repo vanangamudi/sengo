@@ -2,6 +2,7 @@ from arichuvadi import get_letters_coding as _ta
 import arichuvadi as ari
 import pdb
 import sys
+import argparse
 
 ################## ithuva_aa athuva_aa vagai  ####################
 # ?, *, + kurigal
@@ -177,16 +178,30 @@ def poru(paangu, saram):
 
 if __name__ == '__main__':
 
-    if len(sys.argv) < 2:
+    parser = argparse.ArgumentParser('sengo')
+    parser.add_argument('-p', '--paangu',
+                        help='paangu e.g: ^தனி.*',
+                        default=None)
+    
+    parser.add_argument('-s', '--saram',
+                        help='saram to match e.g:தனிச்செம்மொழி தமிழ்',
+                        default=None)
+    
+    args = parser.parse_args()
+
+    paangugal, varigal = [], []
+    
+    if args.paangu: paangugal = [args.paangu]
+    if args.saram: varigal = [args.saram]
+
+    if not paangugal:
         paangugal = open('sothanai-paangugal.txt').read().split('\n')
-        varigal   = open('sothanai-varigal.txt').read().split('\n')
-        
         paangugal = [i for i in paangugal if i.strip()]
+        
+    if not varigal:
+        varigal   = open('sothanai-varigal.txt').read().split('\n')
         varigal   = [i for i in varigal if i.strip()]
-    else:
-        assert len(sys.argv) > 2
-        paangugal = [sys.argv[1]]
-        varigal = [sys.argv[2]]
+
     
     for paangu in paangugal:
         print(f'======= {paangu}  =======')
