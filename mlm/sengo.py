@@ -143,7 +143,13 @@ def paangu_poru(paangu, saram, neelam=0):
         return True, neelam
     if len(paangu) and not len(saram):
         return False, None
-
+    
+    if paangu[0] == '$':
+        if len(saram) > 0:
+            return False, None
+        else:
+            return True, neelam
+    
     muthal, kuri, meethi = paangu_piri(paangu)
     print(f' muthal kuri meethi: {"".join(muthal)}, {kuri}, {"".join(meethi)}')
     
