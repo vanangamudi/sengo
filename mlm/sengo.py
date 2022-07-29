@@ -27,11 +27,16 @@ def vaguppa_aa(paangu):
 # pulli(.) kuri
 def pulliya_aa(yezhuthu): return yezhuthu == '.'
 
+# \எ - எண்கள், \செ - எழுத்துகள் போல
+def sirappu_vaguppa_aa(yezhuthu):
+    return yezhuthu == '\\'
+
 def urupadiya_aa(paangu):
     return (
         vaguppa_aa(paangu)
         or yezhutha_aa(paangu[0])
         or pulliya_aa(paangu[0])
+        or sirappu_vaguppa_aa(paangu[0])
     )
 
 # maatra_aa
@@ -58,10 +63,13 @@ def maatru_piri(paangu):
 def paangu_piri(paangu):
     muthal, kuri, meethi = None, None, None
 
+    i = 0
     if maatru_thalaiya_aa(paangu[0]):
         i  = paangu.index(')') + 1
     elif vaguppu_thalaiya_aa(paangu[0]):
         i  = paangu.index(']') + 1
+    elif sirappu_vaguppa_aa(paangu[0]): 
+        i += 2
     else:
         i = 1
 
@@ -113,7 +121,6 @@ def urupadi_poruvutha_aa(paangu, saram):
     
     if vaguppa_aa(muthal):
         urupadigal = vaguppu_piri(muthal)
-        print(urupadigal, saram)
         return saram[0] in urupadigal
 
     elif yezhutha_aa(muthal):
@@ -121,6 +128,13 @@ def urupadi_poruvutha_aa(paangu, saram):
 
     elif pulliya_aa(muthal[0]):
         return True
+    
+    elif sirappu_vaguppa_aa(muthal[0]):
+        if ''.join(muthal) == '\எ':
+            return ari.yenna_aa(saram[0])
+        if ''.join(muthal) == '\சொ':
+            return ari.yezhutha_aa(saram[0])
+        
 
 def maatru_poru(paangu, saram, neelam):
     muthal, kuri, meethi = paangu_piri(paangu)
