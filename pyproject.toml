@@ -18,6 +18,13 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+dependencies = [
+    "arichuvadi >= 0.0.4",
+]
+
+[project.scripts]
+sengo = "sengo.vaayil:vaayil"
+
 [project.urls]
 "Homepage" = "https://github.com/vanangamudi/sengo"
 "Bug Tracker" = "https://github.com/vanangamudi/sengo/issues"
