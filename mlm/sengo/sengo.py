@@ -152,7 +152,7 @@ def maatru_poru(paangu, saram, neelam):
     return False, None
 
 def paangu_poru(paangu, saram, neelam=0):
-    print(neelam, ':', ''.join(paangu), '=?=', ''.join(saram))
+    #print(neelam, ':', ''.join(paangu), '=?=', ''.join(saram))
 
     if len(paangu) == 0:
         return True, neelam
@@ -166,7 +166,7 @@ def paangu_poru(paangu, saram, neelam=0):
             return True, neelam
     
     muthal, kuri, meethi = paangu_piri(paangu)
-    print(f' muthal kuri meethi: {"".join(muthal)}, {kuri}, {"".join(meethi)}')
+    #print(f' muthal kuri meethi: {"".join(muthal)}, {kuri}, {"".join(meethi)}')
     
     if kelvi_kuriya_aa(kuri):
         #paangu not muthal because pala_poruthu needs meethi for backtracking
@@ -184,6 +184,7 @@ def paangu_poru(paangu, saram, neelam=0):
 
     else:
         print(f'பாங்கு {paangu} என்னனு புரியலப்பா!!!')
+        
     
     return False, None
 
